@@ -1,46 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Language Translator | CodingNepal</title>
-  <link rel="stylesheet" href="./style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Translate App</title>
 </head>
-
 <body>
-  <div class="container">
-    <div class="wrapper">
-      <div class="text-input">
-        <textarea spellcheck="false" class="from-text" placeholder="Enter text"></textarea>
-        <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
-      </div>
-      <ul class="controls">
-        <li class="row from">
-          <div class="icons">
-            <i id="from" class="fas fa-volume-up"></i>
-            <i id="from" class="fas fa-copy"></i>
-          </div>
-          <select></select>
-        </li>
-        <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
-        <li class="row to">
-          <select></select>
-          <div class="icons">
-            <i id="to" class="fas fa-volume-up"></i>
-            <i id="to" class="fas fa-copy"></i>
-          </div>
-        </li>
-      </ul>
+    <div class="container">
+        <h2 class="app">Translate App</h2>
+
+        <form action="" id="form">
+            <div class="textarea-container">
+                <textarea name="fromLan" id="fromLan" placeholder="Matnni kiriting..." rows="5"></textarea>
+                <span class="speaker-icon" onclick="speakText('fromLan')">🔊</span>
+            </div>
+            <div class="textarea-container">
+                <textarea name="toLan" id="toLan" placeholder="Tarjima natijasi..." rows="5" readonly></textarea>
+                <span class="speaker-icon" onclick="speakText('toLan')">🔊</span>
+            </div>
+
+            <select name="fromLanguage" id="fromLanguage"></select>
+            <select name="toLanguage" id="toLanguage"></select>
+
+            <button type="submit" class="translate">Tarjima qilish</button>
+        </form>
     </div>
-    <button>Translate Text</button>
-  </div>
 
-  <script src="./js/countries.js"></script>
-  <script src="./js/script.js"></script>
-
+    <script src="./js/lan.js"></script>
+    <script src="./js/app.js"></script>
 </body>
-
 </html>
